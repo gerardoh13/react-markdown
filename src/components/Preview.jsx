@@ -7,16 +7,14 @@ import Markdown from 'marked-react';
 class Preview extends React.Component {
 render () {
     return (
-        <div>
         <Card className="preview ">
             <Card.Header>
-            <h1>Preview</h1>
+            <h2>Preview</h2>
             </Card.Header>
             <Card.Body id="preview">
                 <Markdown value={this.props.value} breaks={true}/>
             </Card.Body>
         </Card>
-        </div>
     );
 }
 }

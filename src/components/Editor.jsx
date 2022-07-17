@@ -26,17 +26,17 @@ render () {
     return (
         <div>
             <Row>
-                <Col >
+                <Col lg={6} xs={12}>
                 <Card className="editor">
             <Card.Header>
             <h1>Editor</h1>
             </Card.Header>
             <Card.Body>
-                <textarea className="textarea" id="editor" value={this.state.value} defaultValue={defaultText} onChange={this.handleChange} type="text"/>
+                <textarea className="form-control" rows="20" id="editor" value={this.state.value} defaultValue={defaultText} onChange={this.handleChange} type="text"/>
             </Card.Body>
         </Card>
                 </Col>
-                <Col >
+                <Col lg={6} xs={12}>
                 <Preview value={this.state.text} renderer={renderer}/>
                 </Col>
             </Row>

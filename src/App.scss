@@ -5,7 +5,7 @@
   .App-header {
     background-color: #282c34;
     min-height: 100vh;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -14,14 +14,19 @@
   }
   
   .editor {
-    width: 800px;
+    text-align: left;
+    // width: 800px;
+    margin:auto;
+    width: 100%;
     max-width: 800px;
     min-height: 400px;
   }
   
   .preview {
     text-align: left;
-    width: 800px;
+    // width: 800px;
+    margin:auto;
+    width: 100%;
     max-width: 800px;
     min-height: 400px;
   }
@@ -66,12 +71,10 @@
     }
   
     h1 {
-    //   border-bottom: 2px solid $darkAccent;
       border-bottom: 2px solid;
     }
   
     h2 {
-    //   border-bottom: 1px solid $darkAccent;
       border-bottom: 1px solid;
     }
   
@@ -81,7 +84,6 @@
   
     td,
     th {
-    //   border: 2px solid $darkAccent;
       border: 2px solid;
       padding-left: 5px;
       padding-right: 5px;
