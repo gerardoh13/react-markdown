@@ -33,12 +33,11 @@ class Editor extends React.Component {
         })
     }
     handleButtons = (e) => {
-        let val = e.target.value
+        let val = e.currentTarget.value
         const { text } = this.state
         let textCopy = text
         let myField = document.getElementsByTagName('textarea').item(0);
         let newText = textCopy.slice(0, myField.selectionStart) + ' ' + val + ' ' + textCopy.slice(myField.selectionEnd)
-        console.log(newText)
         this.setState({
             text: newText
         })
@@ -53,14 +52,12 @@ class Editor extends React.Component {
     }
 render () {
     return (
-        <div>
-            <Row>
+            <Row >
                 <TextArea hideEditor={this.state.hideEditor} minEditor={this.minEditor} text={this.state.text} handleChange={this.handleChange} handleButtons={this.handleButtons}/>
                 <Col lg={this.state.hideEditor ? 12 : 6} xs={12}>
                 <Preview value={this.state.text} renderer={renderer}/>
                 </Col>
             </Row>
-        </div>
     );
 }
 }
