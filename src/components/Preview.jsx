@@ -4,19 +4,17 @@ import Markdown from 'marked-react';
 
 // Markdown.arguments 
 
-class Preview extends React.Component {
-render () {
+    function Preview(props) {
     return (
         <Card className="preview ">
             <Card.Header>
-            <h2>Preview</h2>
+            <h5>Preview</h5>
             </Card.Header>
             <Card.Body id="preview">
-                <Markdown value={this.props.value} breaks={true}/>
+                <Markdown value={props.value} breaks={true}/>
             </Card.Body>
         </Card>
     );
-}
 }
 
 export default Preview
